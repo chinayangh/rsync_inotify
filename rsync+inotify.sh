@@ -1,6 +1,6 @@
 #!/bin/bash
 src=/data/                           # 需要同步的源路径
-des=data                             # 目标服务器上 rsync --daemon 发布的名称，rsync --daemon这里就不做介绍了，网上搜一下，比较简单。
+des=data                             # 目标服务器上 rsync --daemon 发布的名称，rsync --daemon这里就不做介绍了，百度一下，比较简单。
 rsync_passwd_file=/etc/rsyncd.passwd            # rsync验证的密码文件
 ip1=192.168.1.18                 # 目标服务器1
 ip2=192.168.1.19                 # 目标服务器2
