@@ -2,8 +2,8 @@
 src=/data/                           # 需要同步的源路径
 des=data                             # 目标服务器上 rsync --daemon 发布的名称，rsync --daemon这里就不做介绍了，百度一下，比较简单。
 rsync_passwd_file=/etc/rsyncd.passwd            # rsync验证的密码文件
-ip1=192.168.1.18                 # 目标服务器1
-ip2=192.168.1.19                 # 目标服务器2
+ip1=192.168.1.X                 # 目标服务器1
+ip2=192.168.1.X                 # 目标服务器2
 user=root                            # rsync --daemon定义的验证用户名
 cd ${src}                              # 此方法中，由于rsync同步的特性，这里必须要先cd到源目录，inotify再监听 ./ 才能rsync同步后目录结构一致，有兴趣的同学可以进行各种尝试观看其效果
 /usr/local/bin/inotifywait -mrq --format  '%Xe %w%f' -e modify,create,delete,attrib,close_write,move ./ | while read file         # 把监控到有发生更改的"文件路径列表"循环
